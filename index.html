@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icomer</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="asstes/css/stilos.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-dark position-sticky top-0  tipoNav">
+        <ul class="nav nav-pills mb-2 py-3 container d-flex justify-content-between" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active"  id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" onclick="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Producto</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <!-- <button class="nav-link" onclick="" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</button> -->
+                    <button type="button" class="btn btn-primary position-relative" onclick="total_compra()">
+                        carrito
+                        <div id="numero_articulos"></div>
+                    </button>
+            </li>
+        </ul>
+    </header>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+            tabindex="0">1</div>
+        <div class="tab-pane fade container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+            tabindex="0">
+            <h2 class=" m-4 text-primary text-center">Producto Pistolas</h2>
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Pistola Walther Q5 Match SF Black Ribbon 5" 9mm Parabellum</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/p/i/pistola-walther-q5-match-sf-black-ribbon-5-9mm.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body " >
+                            <p class="card-text description text-white-50">La Walther Q5 Match SF Black Ribbon es una pistola de tiro perfecta para ser utilizada como pistola de competición.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 15.500.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button onclick="compras('Pistola Walther Q5 Match SF Black Ribbon 5 9mm Parabellum', '15500000')" class="btn btn-primary button" > Añadir al carrito </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Pistola Walther PDP 5.1" First Edition 9mm</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/p/i/pistola-walther-pdp-5-1-first-edition-9mm-parabellum.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">La pistola Walther PDP First Edition es una pistola de tiro que cuenta con un cañón de 5.1" de tamaño.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 28.000.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Pistola Walther PDP 5.1 First Edition 9mm', '28000000')">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Pistola Walther Q5 Match SF</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/p/i/pistola-walther-q5-match-sf.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">Todas sus características y accesorios se centran en mejorar sus condiciones de pistola de tiro deportivo.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 27.500.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Pistola Walther Q5 Match SF', 27500000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Pistola STI DVC Steel 9mm</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/p/i/pistola-sti-dvc-steel-9mm_1_.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">La pistola STI DVC Steel ofrece el mismo o superior rendimiento que el DVC Open pero sin el requisito de tener que emplear munición de factor de potencia mayor.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 25.000.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Pistola STI DVC Steel 9mm', 25000000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *//---------escopetas--------------//* -->
+            <h2 class=" m-4 text-primary text-center">Producto escopetas</h2>
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Escopeta Smith & Wesson M&P12 - .12/76</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/e/s/escopeta-smith-wesson-mp12-12-76.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">La escopeta Smith & Wesson MP12 es una escopeta bullpup táctica de tamaño muy compacto con un uso claramente policial</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 45.500.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Escopeta Smith & Wesson M&P12 - .12/76', 45500000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Escopeta Mossberg 590 Shockwave .12</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/e/s/escopeta-mossberg-590-shockwave-12.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">Shockwave es una escopeta táctica de gran calidad con un diseño muy moderno y serio que posee una gran versatilidad. </p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 18.000.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Escopeta Mossberg 590 Shockwave .12', 18000000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Escopeta corredera MOSSBERG 500 ATI Tactical arena .12/76</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/e/s/escopeta-de-corredera-mossberg-500-ati-tactical-arena-12-76.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50">MOSSBERG 500 ATI Tactical en color arena de calibre 12 para cartuchos de 76 mm. Una escopeta táctica ideal para la seguridad y para la caza.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 20.000.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Escopeta corredera MOSSBERG 500 ATI Tactical arena .12/76', 20000000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justiy-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center text-primary">Escopeta MOSSBERG 590M MAG-FED Tactical</h5>
+                        <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/e/s/escopeta-de-corredera-mossberg-590m-mag-fed-tactical-12-76.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text description text-white-50"> MOSSBERG 590M MAG-FED Tactical, con un gran cargador de 10+1 proyectiles y un acabado sintético.</p>
+                            <h5 class="text-primary"> Precio: <span class="precio">$ 30.000.000</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary button" onclick="compras('Escopeta MOSSBERG 590M MAG-FED Tactical', 30000000)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        <!-- carrito -->
+        <div class="tab-pane fade Carr" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            <br>
+            <table class="table table table-dark table-hover">
+                <thead>
+                    <tr class="text-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">productot</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="table__productos">
+                            <img src="https://www.blackrecon.com/media/catalog/product/cache/e4ddaa721414f8f0bc6bc4a75ae93d16/p/i/pistola-walther-q5-match-sf-black-ribbon-5-9mm.jpg" alt="">
+                        <h6 class="title">Pistola Walther Q5 Match SF Black Ribbon 5" 9mm Parabellum</h6>
+                        </td>
+                        <td class="table__precio">
+                            <p>$ 15.500.000</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1">
+                            <button class="delete btn btn-danger" >x</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <div class="row mx-4">
+                <div class="col">
+                    <h3 class="itemCartTotal">Total:0</h3>
+                    <div class="col d-flex justify-content-end">
+                        <button class="btn btn-success">COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark p-3 mt-5">
+        <p class="text-center m-0 text-muted">Compra tu arma</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"crossorigin="anonymous"></script>
+    <!-- <script src="assets/js/code.js"></script> -->
+    <script src="./asstes/js/code.js"></script>
+</body>
+
+</html>
